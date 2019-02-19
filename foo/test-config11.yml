@@ -1,1 +1,20 @@
-spring:test
+spring:
+  profiles:
+    active: test11
+
+---
+
+server:
+  port: 8201
+
+spring:
+  profiles: dev11
+  application:
+    name: test-cloud-dev-2.0
+
+---
+
+spring:
+  profiles: test11
+  application:
+    name: test-cloud-test-2.0
