@@ -1,6 +1,13 @@
+#spring:
+#  application:
+#    name: config-client
+
+#server:
+#  port: 9090
+
 spring:
   profiles:
-    active: dev
+    active: test
 
 ---
 
