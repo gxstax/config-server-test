@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-register1.com:30300/eureka/ #eureka服务端提供的注册地址 参考服务端配置的这个
+      defaultZone: http://base-register:30300/eureka/ #eureka服务端提供的注册地址 参考服务端配置的这个
   instance:
     instance-id: ${spring.application.name} #此实例注册到eureka服务端的唯一的实例ID
     prefer-ip-address: true #是否显示ip地址

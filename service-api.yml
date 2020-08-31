@@ -3,16 +3,6 @@ server:
   servlet:
     context-path: /api/${spring.application.name}
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-register1.com:30300/eureka/ #eureka服务端提供的注册地址 参考服务端配置的这个
-  instance:
-    instance-id: ${spring.application.name} #此实例注册到eureka服务端的唯一的实例ID
-    prefer-ip-address: true #是否显示ip地址
-    leaseRenewalIntervalInSeconds: 10 #eureka客户端需要多长时间发送心跳给eureka服务器，表明它仍然活着, 默认为30秒（与下面配置的单位都是秒）
-    leaseExpirationDurationInSeconds: 30 #Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认90秒
-
 ## sharding-jdbc 配置，数据库连接
 sharding:
   jdbc:
