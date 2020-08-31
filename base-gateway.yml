@@ -1,0 +1,37 @@
+server:
+  port: 30500
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false #是否可以直接使用微服务名路由
+      routes:
+        - id: service-api
+          uri: lb://SERVICE-API
+          predicates:
+            - Path=/api/service-api/**
+          filters:
+            - name: Hystrix
+              args:
+                name: fallbackcmd
+                fallbackUri: forward:/fallback
+
+        - id: service-admin
+          uri: lb://SERVICE-ADMIN
+          predicates:
+            - Path=/api/service-admin/**
+          filters:
+            - name: Hystrix
+              args:
+                name: fallbackcmd
+                fallbackUri: forward:/fallback
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000

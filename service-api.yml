@@ -1,3 +1,7 @@
+server:
+  port: 30100
+  servlet:
+    context-path: /api/${spring.application.name}
 
 ## sharding-jdbc 配置，数据库连接
 sharding:
