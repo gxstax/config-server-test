@@ -7,3 +7,12 @@ eureka:
     prefer-ip-address: true #是否显示ip地址
     leaseRenewalIntervalInSeconds: 10 #eureka客户端需要多长时间发送心跳给eureka服务器，表明它仍然活着, 默认为30秒（与下面配置的单位都是秒）
     leaseExpirationDurationInSeconds: 30 #Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认90秒
+
+
+## jwt secret key
+jwt:
+  token:
+    ### test
+    secret: domi-service-n1gGcCLcpgboZRhb86q1DM0pXlpidfn2
+    expiration: 7200000
+    issuer: domi
