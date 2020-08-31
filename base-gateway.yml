@@ -45,3 +45,12 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 1000
+
+
+## jwt secret key
+jwt:
+  token:
+    ### test
+    secret: domi-service-n1gGcCLcpgboZRhb86q1DM0pXlpidfn2
+    expiration: 7200000
+    issuer: domi
