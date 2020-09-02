@@ -1,19 +1,19 @@
-### sharding-jdbc 配置，数据库连接
-#sharding:
-#  jdbc:
-#    data-sources:
-#      ds_master:
-#        driver-class-name: com.mysql.cj.jdbc.Driver
-#        jdbc-url: jdbc:mysql://127.0.0.1:3306/domi?characterEncoding=utf8&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
-#        password: Gxstax370828
-#        username: root
-#      ds_slave_0:
-#        driver-class-name: com.mysql.cj.jdbc.Driver
-#        jdbc-url: jdbc:mysql://127.0.0.1:3306/domi?characterEncoding=utf8&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
-#        password: Gxstax370828
-#        username: root
-#    master-slave-rule:
-#      load-balance-algorithm-type: round_robin
-#      master-data-source-name: ds_master
-#      name: ds_ms
-#      slave-data-source-names: ds_slave_0
+## sharding-jdbc 配置，数据库连接
+sharding:
+  jdbc:
+    data-sources:
+      ds_master:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/domi?characterEncoding=utf8&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+        password: Gxstax370828
+        username: root
+      ds_slave_0:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/domi?characterEncoding=utf8&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+        password: Gxstax370828
+        username: root
+    master-slave-rule:
+      load-balance-algorithm-type: round_robin
+      master-data-source-name: ds_master
+      name: ds_ms
+      slave-data-source-names: ds_slave_0
