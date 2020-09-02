@@ -22,3 +22,7 @@ server:
 #      master-data-source-name: ds_master
 #      name: ds_ms
 #      slave-data-source-names: ds_slave_0
+
+domi:
+  profit-properties:
+    test: tttt
