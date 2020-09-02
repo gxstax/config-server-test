@@ -24,5 +24,6 @@ server:
 #      slave-data-source-names: ds_slave_0
 
 domi:
-  profitProperties:
-    test: tttt
+  service-admin:
+    profitProperties:
+      test: tttt
