@@ -21,7 +21,7 @@ spring:
         - id: service-admin
           uri: lb://SERVICE-ADMIN
           predicates:
-            - Path=/api/service-admin/**
+            - Path=/admin/service-admin/**
           filters:
             - name: Hystrix
               args:
@@ -34,7 +34,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 1000
+            timeoutInMilliseconds: 10000
 
 
 ## jwt secret key
